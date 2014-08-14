@@ -6,13 +6,16 @@ FROM ubuntu:12.04
 
 MAINTAINER Leonardo Merlin <leonardomerlin@github.com>
 
-# INSTALL:
+# update system
+RUN apt-get update
 
-## download
+# install deps
+RUN apt-get install -y unzip
+
+# download liferay-portal
 ADD http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.2%20GA3/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip /tmp/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip
 
-## extract and clean
-RUN sudo apt-get install -y unzip
+# extract and clean
 RUN unzip /tmp/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip -d /opt
 RUN rm -f /tmp/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip
 

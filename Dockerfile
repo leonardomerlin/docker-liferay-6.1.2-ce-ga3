@@ -2,7 +2,7 @@
 # Dockerfile for Liferay 6.1.2 CE GA3 Environment.
 # 
 
-# FROM ubuntu:12.04
+FROM ubuntu:12.04
 
 MAINTAINER Leonardo Merlin <leonardomerlin@github.com>
 

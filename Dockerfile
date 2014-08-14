@@ -10,10 +10,10 @@ MAINTAINER Leonardo Merlin <leonardomerlin@github.com>
 RUN apt-get update
 
 # install deps
-RUN apt-get install -y unzip
+RUN apt-get install -y -q unzip
 
 # download liferay-portal
-ADD http://sourceforge.net/projects/lportal/files/Liferay%20Portal/6.1.2%20GA3/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip /tmp/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip
+ADD http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/6.1.2%20GA3/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip /tmp/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip
 
 # extract and clean
 RUN unzip /tmp/liferay-portal-tomcat-6.1.2-ce-ga3-20130816114619181.zip -d /opt
